@@ -6,17 +6,16 @@ module.exports = {
         path: path.resolve(__dirname, "./public"),
         filename: "bundle.js"
     },
-    resolve:{
+    resolve: {
         extensions: ['.js', '.vue'],
-        alias:{
+        alias: {
             'vue$': 'vue/dist/vue.common.js'
         }
     },
     module: {
-        loaders: [
-            {
-                test: /\.vue$/, 
-                loader: 'vue-loader'   
+        loaders: [{
+                test: /\.vue$/,
+                loader: 'vue-loader'
             },
             {
                 test: /\.js$/,
@@ -25,10 +24,9 @@ module.exports = {
             }
         ]
     },
-    devServer:{
-        publicPath: '/public/',
+    devServer: {
+        publicPath: '/',
         port: 4000,
-        inline: true,
-        hot: true
+        inline: true
     }
 }

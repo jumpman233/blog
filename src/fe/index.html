@@ -1,15 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>my blog</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <div id="app">
-            <!-- <router-link to="/about">haha</router-link>
+
+<head>
+    <title>my blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+        html,
+        body,
+        div,
+        ul,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        dl,
+        dt,
+        dd,
+        ol,
+        form,
+        input,
+        textarea,
+        th,
+        td,
+        select {
+            margin: 0;
+            padding: 0;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            min-height: 100%;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei";
+            font-size: 14px;
+            color: #333;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+        
+        ul,
+        ol {
+            list-style: none;
+        }
+        
+        img {
+            border: none;
+            vertical-align: middle;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #232323;
+        }
+        
+        table {
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        
+        input,
+        textarea {
+            outline: none;
+            border: none;
+        }
+        
+        textarea {
+            resize: none;
+            overflow: auto;
+        }
+        
+        .clearfix {
+            zoom: 1;
+        }
+        
+        .clearfix:after {
+            content: ".";
+            width: 0;
+            height: 0;
+            visibility: hidden;
+            display: block;
+            clear: both;
+            overflow: hidden;
+        }
+        
+        .fl {
+            float: left
+        }
+        
+        .fr {
+            float: right
+        }
+        
+        .tl {
+            text-align: left;
+        }
+        
+        .tc {
+            text-align: center
+        }
+        
+        .tr {
+            text-align: right;
+        }
+        
+        .ellipse {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .inline {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <router-link to="/about">haha</router-link>
             <router-view></router-view> -->
-        </div>
-        <script src="../public/bundle.js"></script>
-    </body>
+    </div>
+    <script src="../public/bundle.js"></script>
+</body>
+
 </html>

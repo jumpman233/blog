@@ -1,7 +1,7 @@
 <template>
     <div class="search-tool">
-        <input type="text" placeholder="title/content"/>
-        <button>search</button>
+        <el-input type="text" placeholder="title/content" size="small"/>
+        <el-button type="primary" size="mini">search</el-button>
     </div>
 </template>
 
@@ -13,6 +13,9 @@
 
 <style>
 .search-tool{
-    display: inline-block;    
+    display: inline-block;
+}
+.el-input {
+    width: 140px;
 }
 </style>
