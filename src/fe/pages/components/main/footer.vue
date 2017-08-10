@@ -1,6 +1,6 @@
 <template>
     <footer>
-        Hi, I'm footer
+        <a>Hi, I'm footer</a>
     </footer>
 </template>
 
@@ -15,8 +15,14 @@ footer{
     text-align: center;
     height: 100px;
     line-height: 100px;
-    background-color: #495880;
+    background-color: #363B3F;
     font-size: 30px;
-    color: white;
+    color: #7d8390;
+}
+footer a{
+    color: #7d8390;
+}
+footer a:hover{
+    color: #fff;
 }
 </style>

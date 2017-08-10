@@ -20,19 +20,21 @@
 
 <style>
     .page{
-        background-color: #eee;
+        background: #E1E8E9;
+		background-image: linear-gradient(90deg, rgba(235, 238, 243, .5) 2px, transparent 0), linear-gradient( rgba(235, 238, 243, .5) 2px, transparent 0);
+        background-size: 15px 15px;
+        padding: 50px 0;
     }
     .content{
         background-color: white;
         min-height: 600px;
-        border-left: 1px solid #666;
-        border-right: 1px solid #666;
+        border: 1px solid #666;
         border-radius: 5px;
         padding: 40px 20px;
     }
     .to-center{
         max-width: 1000px;
-        width: 70%;
+        width: 90%;
         margin: 0 auto;
     }
 </style>

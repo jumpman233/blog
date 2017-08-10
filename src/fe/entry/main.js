@@ -1,11 +1,13 @@
 import Vue from 'vue';
 import router from '../pages/js/router';
 import App from '../pages/components/App.vue';
-import { Button, Input } from 'element-ui'
+import { Button, Input } from 'element-ui';
+import ElementUi from 'element-ui';
+import 'element-ui/lib/theme-default/index.css';
 
 Vue.use(Button);
 Vue.use(Input);
-console.log(Button)
+Vue.use(ElementUi);
 
 const app = new Vue({
     el: '#app',
