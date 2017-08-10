@@ -20,7 +20,6 @@
 <script>
     import {Menu} from 'element-ui';
     import Vue from 'vue';
-    console.log(Vue.component);
 
     // Vue.use(ElCollapseTransition);
 
@@ -46,7 +45,7 @@
     position: relative;
     background-color: #fff;
     height: 65px;
-    padding-left: 50px;
+    padding: 0 5%;
 }
 
 .page-title{
@@ -58,7 +57,7 @@
 .page-header-content{
     position: absolute;
     top: 0;
-    right: 0;
+    right: 5%;
 }
 
 .page-header-nav{

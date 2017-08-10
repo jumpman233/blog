@@ -19,6 +19,9 @@
 </script>
 
 <style>
+    #app{
+        min-width: 800px;
+    }
     .page{
         background: #E1E8E9;
 		background-image: linear-gradient(90deg, rgba(235, 238, 243, .5) 2px, transparent 0), linear-gradient( rgba(235, 238, 243, .5) 2px, transparent 0);
