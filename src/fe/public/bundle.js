@@ -53971,12 +53971,35 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'About',
     data() {
         return {
-            title: "this is about page"
+            tableData: [{
+                index: '0',
+                cent: '70%',
+                query: 'a->b->c'
+            }, {
+                index: '1',
+                cent: '20%',
+                query: 'a->d->e'
+            }, {
+                index: '2',
+                cent: '6%',
+                query: 'b->d->e'
+            }, {
+                index: '3',
+                cent: '4%',
+                query: 'a->b->c'
+            }]
         };
     }
 });
@@ -53987,7 +54010,30 @@ if (false) {(function () {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('h1', [_vm._v(_vm._s(_vm.title))])])
+  return _c('div', [_c('el-table', {
+    staticStyle: {
+      "width": "100%"
+    },
+    attrs: {
+      "stripe": "",
+      "data": _vm.tableData
+    }
+  }, [_c('el-table-column', {
+    attrs: {
+      "prop": "index",
+      "label": "排列"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "prop": "cent",
+      "label": "占比"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "prop": "query",
+      "label": "序列"
+    }
+  })], 1)], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -54089,7 +54135,7 @@ exports = module.exports = __webpack_require__(8)(undefined);
 
 
 // module
-exports.push([module.i, "\n.home{\n    height: 500px;\n    border: 1px solid #666;\n    border-radius: 5px;\n    padding: 20px;\n}\n#chart-1{\n    width: 700px;\n    height: 500px;\n    margin: 0 auto;\n}\n", ""]);
+exports.push([module.i, "\n.home{\n    min-height: 500px;\n    border: 1px solid #666;\n    border-radius: 5px;\n    padding: 20px;\n}\n#chart-1{\n    width: 80%;\n    height: 700px;\n    margin: 0 auto;\n}\n", ""]);
 
 // exports
 
@@ -54225,7 +54271,7 @@ module.exports = function listToStyles (parentId, list) {
                     }
                 },
                 force: {
-                    repulsion: 4000
+                    repulsion: 7000
                 },
                 edgeLength: [1000, 2000],
                 edgeLabel: {
@@ -54494,7 +54540,7 @@ exports = module.exports = __webpack_require__(8)(undefined);
 
 
 // module
-exports.push([module.i, "\n.page-header{\n    text-align: center;\n    position: relative;\n    background-color: #fff;\n    height: 65px;\n    padding: 0 5%;\n}\n.page-title{\n    color: white;\n    float: left;\n    height: 65px;\n}\n.page-header-content{\n    position: absolute;\n    top: 0;\n    right: 5%;\n}\n.page-header-nav{\n    margin: 20px 0;\n    color: white;\n}\n.page-header-nav a{\n    margin-right: 50px;\n    color: white;\n}\n.el-menu{\n    background-color: #fff;\n}\n.el-menu-item, .el-submenu__title{\n    font-size: 16px;\n}\n.el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item.is-active, .el-menu-item.is-active{\n    color: #ed7c5e;\n    border-bottom: 5px solid #ed6c5e;\n}\n.el-menu--horizontal>.el-menu-item:hover, .el-menu--horizontal>.el-submenu.is-active .el-submenu__title, .el-menu--horizontal>.el-submenu:hover .el-submenu__title{\n    border-bottom: none;\n    border-bottom: 5px solid #ed6c5e;\n}\n.el-menu--horizontal .el-menu-item{\n    height: 65px;\n    line-height: 65px;\n}\n", ""]);
+exports.push([module.i, "\n.page-header{\n    text-align: center;\n    position: relative;\n    background-color: #fff;\n    height: 65px;\n    padding: 0 5%;\n}\n.page-title{\n    color: white;\n    float: left;\n    height: 65px;\n}\n.page-header-content{\n    position: absolute;\n    top: 0;\n    right: 5%;\n}\n.page-header-nav{\n    margin: 20px 0;\n    color: white;\n}\n.page-header-nav a{\n    margin-right: 50px;\n    color: white;\n}\n.el-menu{\n    background-color: #fff;\n}\n.el-menu-item, .el-submenu__title{\n    font-size: 16px;\n}\n.el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item.is-active, .el-menu-item.is-active{\n    color: #ed7c5e;\n    border-bottom: 5px solid #ed6c5e;\n}\n.el-menu--horizontal>.el-menu-item:hover, .el-menu--horizontal>.el-submenu.is-active .el-submenu__title, .el-menu--horizontal>.el-submenu:hover .el-submenu__title{\n    border-bottom: none;\n    border-bottom: 5px solid #ed6c5e;\n}\n.el-menu--horizontal .el-menu-item{\n    height: 65px;\n    line-height: 65px;\n}\n.el-menu-item a{\n    display: inline-block;\n}\n", ""]);
 
 // exports
 
@@ -54504,10 +54550,6 @@ exports.push([module.i, "\n.page-header{\n    text-align: center;\n    position:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_element_ui__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_element_ui___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_element_ui__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue__);
 //
 //
 //
@@ -54527,24 +54569,19 @@ exports.push([module.i, "\n.page-header{\n    text-align: center;\n    position:
 //
 //
 //
-
-
-
-
-// Vue.use(ElCollapseTransition);
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'header',
-    data: () => {
-        return {
-            activeIndex: '1',
-            activeIndex2: '1'
-        };
-    },
-    methods: {
-        handleSelect(key, keyPath) {
-            console.log(key, keyPath);
+    data() {
+        let activeIndex = 1;
+        if (location.href.indexOf('home') > -1) {
+            activeIndex = 1;
+        } else if (location.href.indexOf('about')) {
+            activeIndex = 2;
         }
+        return {
+            activeIndex: activeIndex.toString()
+        };
     }
 });
 
@@ -62527,32 +62564,24 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "el-menu-demo",
     attrs: {
       "default-active": _vm.activeIndex,
-      "mode": "horizontal"
-    },
-    on: {
-      "select": _vm.handleSelect
+      "mode": "horizontal",
+      "router": true
     }
   }, [_c('el-menu-item', {
     attrs: {
-      "index": "1"
+      "index": "1",
+      "route": {
+        path: '/home'
+      }
     }
-  }, [_c('router-link', {
+  }, [_vm._v("哈哈")]), _vm._v(" "), _c('el-menu-item', {
     attrs: {
-      "to": "/home"
+      "index": "2",
+      "route": {
+        path: '/about'
+      }
     }
-  }, [_vm._v("哈哈")])], 1), _vm._v(" "), _c('el-menu-item', {
-    attrs: {
-      "index": "2"
-    }
-  }, [_vm._v("标题2")]), _vm._v(" "), _c('el-menu-item', {
-    attrs: {
-      "index": "3"
-    }
-  }, [_c('router-link', {
-    attrs: {
-      "to": "/about"
-    }
-  }, [_vm._v("关于")])], 1)], 1)], 1)])
+  }, [_vm._v("嘿嘿")])], 1)], 1)])
 }
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('h1', {

@@ -2,38 +2,33 @@
     <header class="page-header" title="lala">
         <h1 class="page-title"><img src="public/default-p.jpeg" style="height:65px"/></h1>
         <div class="page-header-content">
-            <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-            <el-menu-item index="1"><router-link to="/home">哈哈</router-link></el-menu-item>
-            <el-menu-item index="2">标题2</el-menu-item>
+            <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :router="true">
+            <el-menu-item index="1" :route="{path: '/home'}">哈哈</el-menu-item>
+            <el-menu-item index="2" :route="{path: '/about'}">嘿嘿</el-menu-item>
             <!-- <el-submenu index="2">
                 <template slot="title">我的工作台</template>
                 <el-menu-item index="2-1">选项1</el-menu-item>
                 <el-menu-item index="2-2">选项2</el-menu-item>
                 <el-menu-item index="2-3">选项3</el-menu-item>
             </el-submenu> -->
-            <el-menu-item index="3"><router-link to="/about">关于</router-link></el-menu-item>
+            <!-- <el-menu-item index="3"><router-link to="/about">关于</router-link></el-menu-item> -->
             </el-menu>
         </div>
     </header>
 </template>
 
 <script>
-    import {Menu} from 'element-ui';
-    import Vue from 'vue';
-
-    // Vue.use(ElCollapseTransition);
-
     export default {
         name: 'header',
-        data: ()=>{
-            return {
-                 activeIndex: '1',
-                 activeIndex2: '1'
+        data(){
+            let activeIndex = 1;
+            if(location.href.indexOf('home') > -1){
+                activeIndex = 1;
+            } else if(location.href.indexOf('about')){
+                activeIndex = 2;
             }
-        },
-        methods: {
-            handleSelect(key, keyPath) {
-                console.log(key, keyPath);
+            return {
+                 activeIndex: activeIndex.toString()
             }
         }
     }
@@ -91,5 +86,9 @@
 .el-menu--horizontal .el-menu-item{
     height: 65px;
     line-height: 65px;
+}
+
+.el-menu-item a{
+    display: inline-block;
 }
 </style>

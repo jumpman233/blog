@@ -95,7 +95,7 @@
                             }
                         },
                         force: {
-                            repulsion: 4000
+                            repulsion: 7000
                         },
                         edgeLength: [1000, 2000],
                         edgeLabel: {
@@ -133,15 +133,15 @@
 
 <style>
     .home{
-        height: 500px;
+        min-height: 500px;
         border: 1px solid #666;
         border-radius: 5px;
         padding: 20px;
     }
 
     #chart-1{
-        width: 700px;
-        height: 500px;
+        width: 80%;
+        height: 700px;
         margin: 0 auto;
     }
 </style>
