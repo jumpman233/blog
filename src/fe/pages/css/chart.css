@@ -1,0 +1,14 @@
+.chart-row {
+    margin-bottom: 50px;
+}
+
+.chart-border {
+    border: 1px solid #d1d1d1;
+    padding: 10px 0;
+}
+
+.chart-half {
+    width: 47.5%;
+    margin-right: 2%;
+    display: inline-block;
+}

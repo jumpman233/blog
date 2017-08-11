@@ -1,20 +1,34 @@
 <template>
     <section class="mostCommonVisit">
-        <!-- <force-chart :data="userMostUsePageData"></force-chart> -->
+        <user-form></user-form>
+        <div class="chart-row chart-border">
+            <force-chart :data="userMostUsePageData" ref="usePageChart"></force-chart>
+        </div>
     </section>
 </template>
 
 <script>
-    import echarts from 'echarts';
     import forceChart from '../charts/force-chart.vue';
+    import userForm from '../main/userForm.vue';
 
     export default {
         name: 'mostCommonVist',
         data(){
             return {
+                userMostUsePageData: {
+                    title: '用户最常访问页面'
+                },
             }
         },
-        components:{ forceChart }
+        components:{ forceChart, userForm },
+        mounted(){
+            this.$refs.usePageChart.update('/public/data/one-page.json');
+        },
+        created(){
+            this.$root.eventHub.$on('formSubmit',(target) => {
+                this.$refs.usePageChart.reset();
+            });
+        }
     }
 </script>
 

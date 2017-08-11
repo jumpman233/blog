@@ -3,12 +3,13 @@
         <h1 class="page-title"><img src="public/default-p.jpeg" style="height:65px"/></h1>
         <div class="page-header-content">
             <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :router="true">
-            <el-menu-item index="1" :route="{path: '/home'}">总览</el-menu-item>
-             <el-submenu index="2">
+            <el-menu-item index="1" :route="{path: '/intro'}">产品简介</el-menu-item>
+            <el-menu-item index="2" :route="{path: '/home'}">总览</el-menu-item>
+             <el-submenu index="3">
                 <template slot="title">数据详情</template>
-                <el-menu-item index="2-1" :route="{path: '/about'}">用户路径分析</el-menu-item>
-                <el-menu-item index="2-2" :route="{path: '/mostCommonVisit'}">用户最常访问</el-menu-item>
-                <el-menu-item index="2-3">用户流失分析</el-menu-item>
+                <el-menu-item index="3-1" :route="{path: '/userPathAnalyse'}">用户路径分析</el-menu-item>
+                <el-menu-item index="3-2" :route="{path: '/mostCommonVisit'}">用户最常访问</el-menu-item>
+                <!-- <el-menu-item index="2-3" :route="{path: '/userLostAnalyse'}">用户流失分析</el-menu-item> -->
             </el-submenu> 
             </el-menu>
         </div>
@@ -17,13 +18,17 @@
 
 <script>
     export default {
-        name: 'header',
+        name: 'userPathAnalyse',
         data(){
             let activeIndex = 1;
-            if(location.href.indexOf('home') > -1){
-                activeIndex = 1;
-            } else if(location.href.indexOf('about')){
-                activeIndex = '2-1';
+            if(location.href.indexOf('/intro') > -1){
+                activeIndex = '1';
+            } else if(location.href.indexOf('/home') > -1){
+                activeIndex = '2';
+            } else if(location.href.indexOf('/userPathAnalyse') > -1){
+                activeIndex = '3-1';
+            } else if(location.href.indexOf('/mostCommonVisit') > -1){
+                activeIndex = '3-2';
             }
             return {
                  activeIndex: activeIndex.toString()
