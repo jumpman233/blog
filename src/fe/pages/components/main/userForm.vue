@@ -90,4 +90,8 @@
     width: 50px;
 }
 
+.el-form{
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
 </style>
