@@ -78,13 +78,14 @@
             }
         })
     });
+    let chart = null;
     export default {
         name: 'forceChart',
-        props: ['data'],
+        props: ['data', 'chart'],
         methods:{
             update(url){
                 let data = this.data,
-                el = this.$el,
+                el = this.$el;
                 chart = echarts.init(el);
                 axios.get(url).then((res)=>{
                     let nodes = [];
@@ -128,11 +129,7 @@
                 })
             },
             reset(){
-                let data = this.data,
-                el = this.$el,
-                chart = echarts.init(el);
-
-                chart.setOption(opts);
+                chart.resize(opts);
                 chart.showLoading({
                         zlevel: 5,
                         text : 'LOADING',

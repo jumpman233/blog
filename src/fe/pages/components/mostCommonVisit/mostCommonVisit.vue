@@ -23,11 +23,15 @@
         components:{ forceChart, userForm },
         mounted(){
             this.$refs.usePageChart.update('/public/data/one-page.json');
-        },
-        created(){
+
             this.$root.eventHub.$on('formSubmit',(target) => {
-                this.$refs.usePageChart.reset();
+                if(this.$refs.usePageChart){
+                    this.$refs.usePageChart.reset();
+                }
             });
+        },
+        destroyed(){
+            this.$root.eventHub.$off();
         }
     }
 </script>
