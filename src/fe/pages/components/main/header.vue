@@ -1,17 +1,15 @@
 <template>
-    <header class="page-header" title="lala">
+    <header class="page-header to-center" title="lala">
         <h1 class="page-title"><img src="public/default-p.jpeg" style="height:65px"/></h1>
         <div class="page-header-content">
             <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :router="true">
-            <el-menu-item index="1" :route="{path: '/home'}">哈哈</el-menu-item>
-            <el-menu-item index="2" :route="{path: '/about'}">嘿嘿</el-menu-item>
-            <!-- <el-submenu index="2">
-                <template slot="title">我的工作台</template>
-                <el-menu-item index="2-1">选项1</el-menu-item>
-                <el-menu-item index="2-2">选项2</el-menu-item>
-                <el-menu-item index="2-3">选项3</el-menu-item>
-            </el-submenu> -->
-            <!-- <el-menu-item index="3"><router-link to="/about">关于</router-link></el-menu-item> -->
+            <el-menu-item index="1" :route="{path: '/home'}">总览</el-menu-item>
+             <el-submenu index="2">
+                <template slot="title">数据详情</template>
+                <el-menu-item index="2-1" :route="{path: '/about'}">用户路径分析</el-menu-item>
+                <el-menu-item index="2-2" :route="{path: '/mostCommonVisit'}">用户最常访问</el-menu-item>
+                <el-menu-item index="2-3">用户流失分析</el-menu-item>
+            </el-submenu> 
             </el-menu>
         </div>
     </header>
@@ -25,7 +23,7 @@
             if(location.href.indexOf('home') > -1){
                 activeIndex = 1;
             } else if(location.href.indexOf('about')){
-                activeIndex = 2;
+                activeIndex = '2-1';
             }
             return {
                  activeIndex: activeIndex.toString()
@@ -40,7 +38,6 @@
     position: relative;
     background-color: #fff;
     height: 65px;
-    padding: 0 5%;
 }
 
 .page-title{
@@ -83,7 +80,7 @@
     border-bottom: 5px solid #ed6c5e;
 }
 
-.el-menu--horizontal .el-menu-item{
+.el-menu--horizontal .el-menu-item,.el-menu--horizontal .el-submenu .el-submenu__title{
     height: 65px;
     line-height: 65px;
 }

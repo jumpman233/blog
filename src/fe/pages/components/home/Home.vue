@@ -1,133 +1,74 @@
 <template>
     <section class="home">
-        <div id="chart-1"></div>
-        Hay! I'm Home.
+        <force-chart :data="userMostUsePageData"></force-chart>
+        <div id="{id}"></div>
     </section>
 </template>
 
 <script>
     import echarts from 'echarts';
+    import forceChart from '../charts/force-chart.vue';
 
     export default {
         name: 'Home',
-        beforeMount(){
-        },
-        mounted(){
-            let chart1 = this.$el.querySelector('#chart-1');
-
-            let b = echarts.init(chart1);
-            let nodes = [
-                {
-                    itemStyle: null,
-                    symbolSize: 70,
-                    value: 1000,
-                    x: null,
-                    y: null,
-                    category: 0,
-                    name: "用户",
-                    draggable: true
-                }, {
-                    itemStyle: null,
-                    symbolSize: 40,
-                    value: 1,
-                    x: null,
-                    y: null,
-                    category: 1,
-                    name: "页面a",
-                    draggable: true
-                }, {
-                    itemStyle: null,
-                    symbolSize: 40,
-                    value: 1,
-                    x: null,
-                    y: null,
-                    category: 1,
-                    name: "页面b",
-                    draggable: true
-                }, {
-                    itemStyle: null,
-                    symbolSize: 40,
-                    value: 1,
-                    x: null,
-                    y: null,
-                    category: 1,
-                    name: "页面c",
-                    draggable: true
-                },{
-                    itemStyle: null,
-                    symbolSize: 40,
-                    value: 1,
-                    x: null,
-                    y: null,
-                    category: 1,
-                    name: "页面d",
-                    draggable: true
-                }
-            ];
-            let links = [
-                {
-                    source: '用户',
-                    target: '页面a'
-                },{
-                    source: '用户',
-                    target: '页面b'
-                },{
-                    source: '用户',
-                    target: '页面c'
-                },{
-                    source: '用户',
-                    target: '页面d'
-                }
-            ]
-            b.setOption({
-                title: {
-                    text: 'Graph 简单示例'
-                },
-                tooltip: {},
-                series : [
-                    {
-                        type: 'graph',
-                        layout: 'force',
-                        symbolSize: 50,
-                        label: {
-                            normal: {
-                                show: true
-                            }
-                        },
-                        force: {
-                            repulsion: 7000
-                        },
-                        edgeLength: [1000, 2000],
-                        edgeLabel: {
-                            normal: {
-                                textStyle: {
-                                    fontSize: 8
-                                }
-                            }
-                        },
-                        categories: [{
-                            name: 'a',
-                            itemStyle: {
-                                normal: {
-                                    color: '#ed7c5e'                                
-                                }
-                            }
+        data(){
+            return {
+                userMostUsePageData: {
+                    width: '500px',
+                    height: '300px',
+                    title: '用户最常访问页面',
+                    nodes: [
+                        {
+                            symbolSize: 70,
+                            value: 1000,
+                            category: 0,
+                            name: "用户",
+                            draggable: true
+                        }, {
+                            symbolSize: 60,
+                            value: 1,
+                            category: 1,
+                            name: "页面a",
+                            draggable: true
+                        }, {
+                            symbolSize: 20,
+                            value: 1,
+                            category: 1,
+                            name: "页面b",
+                            draggable: true
+                        }, {
+                            symbolSize: 40,
+                            value: 1,
+                            category: 1,
+                            name: "页面c",
+                            draggable: true
                         },{
-                            name:'b'
-                        }],
-                        data: nodes,
-                        // links: [],
-                        links: links,
-                        lineStyle: {
-                             normal: {
-                                color: 'source',
-                                curveness: 0.3
-                            }
+                            symbolSize: 40,
+                            value: 1,
+                            category: 1,
+                            name: "页面d",
+                            draggable: true
                         }
-                    }
-                ]
-            });
-        }
+                    ],
+                    links: [
+                        {
+                            source: '用户',
+                            target: '页面a'
+                        },{
+                            source: '用户',
+                            target: '页面b'
+                        },{
+                            source: '用户',
+                            target: '页面c'
+                        },{
+                            source: '用户',
+                            target: '页面d'
+                        }
+                    ]
+                }
+            }
+        },
+        components:{forceChart}
     }
 </script>
 

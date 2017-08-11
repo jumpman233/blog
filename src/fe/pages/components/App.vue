@@ -11,10 +11,11 @@
 <script>
     import blogHeader from './main/header.vue';
     import blogFooter from './main/footer.vue';
+    import sidebar from './main/sidebar.vue';
 
     export default {
         name: 'App',
-        components: { blogHeader, blogFooter }
+        components: { blogHeader, blogFooter, sidebar }
     }
 </script>
 
