@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <a>Hi, I'm footer</a>
+        <a>Made by 独立团</a>
     </footer>
 </template>
 

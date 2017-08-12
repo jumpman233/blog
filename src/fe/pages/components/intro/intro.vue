@@ -1,8 +1,12 @@
 <template>
-    <div>haha</div>
+    <section class="intro">
+        
+    </section>
 </template>
 
 <script>
+    import impress from '../../js/impress';
+
     export default {
         name: 'intro',
         data(){
@@ -12,3 +16,8 @@
         }
     }
 </script>
+
+<style>
+
+</style>
+

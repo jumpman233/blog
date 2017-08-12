@@ -3,7 +3,7 @@
         <h1 class="page-title"><img src="public/default-p.jpeg" style="height:65px"/></h1>
         <div class="page-header-content">
             <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :router="true">
-            <el-menu-item index="1" :route="{path: '/intro'}">产品简介</el-menu-item>
+            <el-menu-item index="1" @click="goIntro">产品简介</el-menu-item>
             <el-menu-item index="2" :route="{path: '/home'}">总览</el-menu-item>
              <el-submenu index="3">
                 <template slot="title">数据详情</template>
@@ -18,7 +18,12 @@
 
 <script>
     export default {
-        name: 'userPathAnalyse',
+        name: 'header',
+        methods: {
+            goIntro(){
+                location.href ="http://localhost:3000/public/intro.html"
+            }
+        },
         data(){
             let activeIndex = 1;
             if(location.href.indexOf('/intro') > -1){
